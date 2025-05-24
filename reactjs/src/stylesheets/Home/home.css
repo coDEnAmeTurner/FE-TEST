@@ -1,0 +1,118 @@
+.home-ul-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.home-ul-div ul {
+  background-color: rgb(70, 90, 90);
+}
+.home-ul-div ul li:nth-child(odd) {
+  color: rgb(196, 223, 43);
+}
+.home-ul-div ul li:nth-child(even) {
+  color: rgb(4, 202, 4);
+}
+
+.home-content-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.home-content-div div {
+  margin-right: 1em;
+  background-color: aqua;
+}
+
+.warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  background-color: rgba(221, 215, 215, 0.4509803922);
+}
+
+.success {
+  border-color: green;
+  color: green;
+}
+
+@keyframes colorize-success {
+  0% {
+    background-image: linear-gradient(green, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+  }
+  20% {
+    background-image: linear-gradient(green, rgba(0, 128, 0, 0.527), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+  }
+  40% {
+    background-image: linear-gradient(green, rgba(0, 128, 0, 0.527), rgba(0, 128, 0, 0.416), rgb(255, 255, 255), rgb(255, 255, 255));
+  }
+  60% {
+    background-image: linear-gradient(green, rgba(0, 128, 0, 0.527), rgba(0, 128, 0, 0.416), rgba(0, 128, 0, 0.377), rgb(255, 255, 255));
+  }
+  80% {
+    background-image: linear-gradient(green, rgba(0, 128, 0, 0.527), rgba(0, 128, 0, 0.416), rgba(0, 128, 0, 0.377), rgba(0, 128, 0, 0.277));
+  }
+  100% {
+    background-image: linear-gradient(green, rgba(0, 128, 0, 0.527), rgba(0, 128, 0, 0.416), rgba(0, 128, 0, 0.377), rgba(0, 128, 0, 0.226));
+  }
+}
+.success:hover {
+  animation-name: colorize-success;
+  animation-duration: 210ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.error {
+  border-color: red;
+  color: red;
+}
+
+@keyframes colorize-error {
+  0% {
+    background-image: linear-gradient(red, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+  }
+  20% {
+    background-image: linear-gradient(red, rgba(255, 0, 0, 0.664), rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+  }
+  40% {
+    background-image: linear-gradient(red, rgba(255, 0, 0, 0.664), rgba(255, 0, 0, 0.564), rgb(255, 255, 255), rgb(255, 255, 255));
+  }
+  60% {
+    background-image: linear-gradient(red, rgba(255, 0, 0, 0.664), rgba(255, 0, 0, 0.564), rgba(255, 0, 0, 0.464), rgb(255, 255, 255));
+  }
+  80% {
+    background-image: linear-gradient(red, rgba(255, 0, 0, 0.664), rgba(255, 0, 0, 0.564), rgba(255, 0, 0, 0.464), rgba(255, 0, 0, 0.364));
+  }
+  100% {
+    background-image: linear-gradient(red, rgba(255, 0, 0, 0.664), rgba(255, 0, 0, 0.564), rgba(255, 0, 0, 0.464), rgba(255, 0, 0, 0.364));
+  }
+}
+.error:hover {
+  animation-name: colorize-error;
+  animation-duration: 210ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.warning {
+  border-color: yellow;
+  color: yellow;
+  background-color: #8299a3;
+}
+
+.home-alert-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1em;
+}
+.home-alert-list div {
+  margin-right: 1em;
+}
+
+.home {
+  font: 100% Times New Roman, sans-serif;
+  color: #333;
+}
+
+/*# sourceMappingURL=home.css.map */

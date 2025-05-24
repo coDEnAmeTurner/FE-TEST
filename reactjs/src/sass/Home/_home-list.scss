@@ -1,0 +1,16 @@
+@use 'home-mixins';
+
+.home-ul-div {
+    @include home-mixins.justify-div();
+
+    ul {
+        background-color: rgb(70, 90, 90);
+        li:nth-child(odd) {
+            color: rgb(196, 223, 43);
+        }
+    
+        li:nth-child(even) {
+            color: rgb(4, 202, 4);
+        }
+    }
+}

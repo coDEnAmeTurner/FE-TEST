@@ -1,0 +1,10 @@
+@use 'home-mixins';
+
+.home-content-div {
+    @include home-mixins.justify-div();
+
+    div {
+        margin-right: 1em;
+        background-color: aqua;
+    }
+}

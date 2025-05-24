@@ -1,0 +1,84 @@
+@use "home-mixins";
+
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  background-color: #ddd7d773;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+  color: green;
+//   transition: background-color 3s;
+//   transition-timing-function: ease-in-out;
+//   @starting-style {
+//     background-color: linear-gradient(green,rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255));
+//   }
+}
+@keyframes colorize-success {
+    0%  { background-image: linear-gradient(green,rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255))}
+    20% { background-image: linear-gradient(green,rgba(0, 128, 0, 0.527),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255))}
+    40% { background-image: linear-gradient(green,rgba(0, 128, 0, 0.527),rgba(0, 128, 0, 0.416),rgb(255, 255, 255),rgb(255, 255, 255))}
+    60% { background-image: linear-gradient(green,rgba(0, 128, 0, 0.527),rgba(0, 128, 0, 0.416),rgba(0, 128, 0, 0.377),rgb(255, 255, 255))}
+    80% { background-image: linear-gradient(green,rgba(0, 128, 0, 0.527),rgba(0, 128, 0, 0.416),rgba(0, 128, 0, 0.377), rgba(0, 128, 0, 0.277))}
+    100% { background-image: linear-gradient(green,rgba(0, 128, 0, 0.527),rgba(0, 128, 0, 0.416),rgba(0, 128, 0, 0.377), rgba(0, 128, 0, 0.226))}
+}
+.success:hover {
+    animation-name:colorize-success;
+    animation-duration: 210ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    // background-color: linear-gradient(green,rgba(0, 128, 0, 0.616),rgba(0, 128, 0, 0.516),rgba(0, 128, 0, 0.377), rgba(0, 128, 0, 0.177)) 
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+  color: red;
+}
+@keyframes colorize-error {
+    0%  { background-image: linear-gradient(red,rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255))}
+    20% { background-image: linear-gradient(red,rgba(255, 0, 0, 0.664),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255))}
+    40% { background-image: linear-gradient(red,rgba(255, 0, 0, 0.664),rgba(255, 0, 0, 0.564),rgb(255, 255, 255),rgb(255, 255, 255))}
+    60% { background-image: linear-gradient(red,rgba(255, 0, 0, 0.664),rgba(255, 0, 0, 0.564),rgba(255, 0, 0, 0.464),rgb(255, 255, 255))}
+    80% { background-image: linear-gradient(red,rgba(255, 0, 0, 0.664),rgba(255, 0, 0, 0.564),rgba(255, 0, 0, 0.464), rgba(255, 0, 0, 0.364))}
+    100%{ background-image: linear-gradient(red,rgba(255, 0, 0, 0.664),rgba(255, 0, 0, 0.564),rgba(255, 0, 0, 0.464), rgba(255, 0, 0, 0.364))}
+}
+.error:hover {
+    animation-name:colorize-error;
+    animation-duration: 210ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    // background-color: linear-gradient(green,rgba(0, 128, 0, 0.616),rgba(0, 128, 0, 0.516),rgba(0, 128, 0, 0.377), rgba(0, 128, 0, 0.177)) 
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+  color: yellow;
+  background-color: #8299a3;
+}
+
+.home-alert-list {
+  @include home-mixins.justify-div();
+
+  margin-top: 1em;
+
+  div {
+    margin-right: 1em;
+  }
+
+
+}

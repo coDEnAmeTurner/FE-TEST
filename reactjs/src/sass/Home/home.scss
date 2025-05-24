@@ -1,0 +1,13 @@
+@use 'home-list';
+
+@use 'home-content-div';
+
+@use 'home-alert-list';
+
+$font-stack: Times New Roman, sans-serif;
+$primary-color: #333;
+
+.home {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
