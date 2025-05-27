@@ -1,10 +1,9 @@
-const HomeDiv = ()=>{
+const HomeDiv = ({str, setStr})=>{
+    console.log("HomeDiv component rendered");
+
     return (
         <div className="home-content-div">
-            <div>quốc tuấn</div>
-            <div>lê thị mai</div>
-            <div>quốc tuấn</div>
-            <div>lê thị mai</div>
+            <input type="text" value={str} onChange={(e)=>setStr(e.target.value)}/>
         </div>
     )
 }

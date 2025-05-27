@@ -1,14 +1,17 @@
 import "../stylesheets/Home/home.css"
-import HomeList from "./HomeList"
+import HomeAlertList from "./HomeAlertList";
 import HomeDiv from "./HomeDiv"
-import HomeAlertList from "./HomeAlertList"
+import { useState } from "react";
 
 const Home = ()=>{
+    console.log("Home component rendered");
+
+    const [str, setStr ] = useState("")
+
     return (
         <div className="home">
-            <HomeList />
-            <HomeDiv />
-            <HomeAlertList />
+            <HomeDiv str={str} setStr={setStr}/>
+            <HomeAlertList/>
         </div>
     )
 }
