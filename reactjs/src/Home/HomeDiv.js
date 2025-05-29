@@ -1,4 +1,6 @@
-const HomeDiv = ({str, setStr})=>{
+const HomeDiv = ({strState})=>{
+    const [str, setStr] = strState
+
     console.log("HomeDiv component rendered");
 
     return (

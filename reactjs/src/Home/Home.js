@@ -1,7 +1,8 @@
 import "../stylesheets/Home/home.css"
 import HomeAlertList from "./HomeAlertList";
-import HomeDiv from "./HomeDiv"
 import { useState } from "react";
+import HomeAlertListNoMemo from "./HomeAlertListNoMemo";
+import Surrounder from "./Surrounder";
 
 const Home = ()=>{
     console.log("Home component rendered");
@@ -10,8 +11,9 @@ const Home = ()=>{
 
     return (
         <div className="home">
-            <HomeDiv str={str} setStr={setStr}/>
-            <HomeAlertList/>
+            <Surrounder strState={[str,setStr]}/>
+            {/* <HomeAlertList/>
+            <HomeAlertListNoMemo/> */}
         </div>
     )
 }
